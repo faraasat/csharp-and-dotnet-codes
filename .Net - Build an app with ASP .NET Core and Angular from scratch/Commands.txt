@@ -1,0 +1,27 @@
+dotnet -h  => to see dotnet help
+dotnet new <Project App> -n <Any Name>  => to create a project in a pwd directory
+dotnet ef -h  => to see help on Entity Framework
+dotnet ef migrations add <name> => this will create migration with name
+dotnet ef migrations remove  => to remove recent migration which is not been added to database
+/*********
+dotnet ef database drop => to drop database
+dotnet ef migrations remove  => to remove the migration which has been added to database because database is dropped
+*********/
+dotnet ef database update  => if we donot have database it will create database and tables as described in migration class
+npm install -g @angular/cli  => to install angular cli npm package
+ng new <applicationName>  => to create an application
+dotnet user-secrets  => to see about user secrets
+dotnet user-secrets set "AppSetttings:Token" "super secret key"  => to save secret to the secret store but it is only accessable in development mode
+dotnet usre-secrets list => To see list of tokens it is only accessable in development mode
+ng g guard auth --skipTests  => to generate routing auth guards in angular
+
+
+
+
+
+
+
+
+
+
+
