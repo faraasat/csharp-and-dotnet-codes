@@ -1,0 +1,84 @@
+Interface : jb hamen child class ko multiple parent classes se inherit karana ho,,, 1 child ke biological 1 hi parent hoty hain,,,,, in You can inherit multiple interfaces on a single child class,,,, but you cannot innherit multiple classes on a single child class..
+nterface wohi kam karti hai jo class karti hai,,, Class and Interface: is a container that hold properties and behaviour of its object,,,,
+
+Rule: 
+i) interface ke ander abstract method banengy,, yani ke un method ki body ni hoti ap srif methods ko define karsakty hain... Implementation hm inheritance main hi karengy.....
+ii) // public likhny  ki zarorat ni hai ,  interface main by default har method public hota hai
+                    //q ke interface ka kam hi ye hai ke wo agy jaky un methods ko override karegi,,,
+
+
+___________________________________________________________________________________________________
+
+using System;
+
+namespace MyApplication
+{
+  
+    interface IAnimal
+    {
+        void animalmethod(); 
+    }
+
+    class Lion : IAnimal
+    {
+        public void animalmethod()
+        {
+           
+            Console.WriteLine("Lion eta meat...");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Lion obj = new Lion();  
+            obj.animalmethod();
+        }
+    }
+}
+
+
+
+
+
+___________________________________________________________________________________________________________
+//Multiple Interface:
+
+using System;
+
+namespace MyApplication
+{
+    interface IFirstInterface
+    {
+        void myMethod();    
+    }
+
+    interface ISecondInterface
+    {
+        void myOtherMethod(); 
+    }
+
+
+    class DemoClass : IFirstInterface, ISecondInterface
+    {
+        public void myMethod()
+        {
+            Console.WriteLine("Some text..");
+        }
+        public void myOtherMethod()
+        {
+            Console.WriteLine("Some other text...");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DemoClass myObj = new DemoClass();
+            myObj.myMethod();
+            myObj.myOtherMethod();
+        }
+    }
+}

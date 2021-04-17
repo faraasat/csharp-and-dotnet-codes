@@ -1,0 +1,86 @@
+Abstract = kch nikalna
+jahan hm function banaen lekin uski body na banaen... tu wo abstract class kehlati hai
+abstract method banaengy parent class main ... phr usi name ka override method banaengy child class main uske ander implementation karengy....
+
+_____________________________________________________________________________
+using System;
+
+namespace MyApplication
+{
+    abstract class Animal
+    {
+        public abstract void mammalmethod();
+        public void AnimalMethod()
+        {
+            Console.WriteLine("Animal Class Method.......");
+        }
+    }
+
+    class mammal : Animal
+    {
+        public override void mammalmethod()
+        {
+          
+            Console.WriteLine("Mammal Method....");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            mammal obj = new mammal();  
+            obj.mammalmethod();
+            obj.AnimalMethod();
+        }
+    }
+}
+
+____________________________________________________________________________
+
+//Add and Multiply numbers
+using System;
+
+abstract class AbstractClass
+{
+	public int AddTwoNumbers(int Num1, int Num2)
+	{
+		return Num1 + Num2;
+	}
+	public abstract int MultiplyTwoNumbers(int Num1, int Num2);
+
+}
+class Derived : AbstractClass
+{
+	public override int MultiplyTwoNumbers(int Num1, int Num2)
+	{
+		return Num1 * Num2;
+	}
+}
+
+class program
+{
+
+	public static void Main()
+	{
+
+		Derived d = new Derived();
+
+		Console.WriteLine("Addition : {0}\nMultiplication :{1}",
+										d.AddTwoNumbers(4, 6),
+									d.MultiplyTwoNumbers(6, 4));
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+﻿<Window x:Class="_28.WPF_Stack_Panel_And_ListBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_28.WPF_Stack_Panel_And_ListBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!-- This StackPanel and listbox etc are logical tree -->
+    <StackPanel>
+        <!-- There Visual Tree Properties which are properties of an elsement and are visually in the program among which most are 
+        automatically been set and we can see them during debugging  -->
+        <TextBlock HorizontalAlignment="Center" Margin="20">Hello World</TextBlock>
+        <ListBox Height="100" Width="100">
+            <ListBoxItem Background="CadetBlue" Foreground="AliceBlue" Content="Item 1" />
+            <ListBoxItem Background="Azure" Foreground="red" Content="Item 2" />
+            <ListBoxItem Background="BlanchedAlmond" Content="Item 3" />
+        </ListBox>
+        
+        <Button Click="Button_Click_1" Margin="20" Width="70">Click Me</Button>
+        <Button MouseUp="Button_MouseUp"  Margin="10" Width="250" HorizontalAlignment="Center" FontFamily="Arial Black" FontWeight="Bold" FontSize="25">Bubbling Event</Button>
+        <Button PreviewMouseUp="Button_PreviewMouseUp"  Margin="10" Width="250" HorizontalAlignment="Center" FontFamily="Arial Black" FontWeight="Bold" FontSize="25">Tuneling Event</Button>
+        <Button PreviewMouseLeftButtonDown="Button_PreviewMouseLeftButtonDown" PreviewMouseRightButtonUp="Button_PreviewMouseRightButtonUp" Margin="10" Width="250" HorizontalAlignment="Center" FontFamily="Arial Black" FontWeight="Bold" FontSize="25">Tuneling Event</Button>
+        
+    </StackPanel>
+</Window>

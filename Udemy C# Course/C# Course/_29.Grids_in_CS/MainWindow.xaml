@@ -1,0 +1,24 @@
+﻿<Window x:Class="_29.Grids_in_CS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_29.Grids_in_CS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />  <!-- If we give Auto in width it will take space according to space and if we give * then it will
+            take equal space as other and if we write 3* then it means that it should take space in ration of 3 -->
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0">Hi There - Some More Text</Button>
+        <Button Grid.Column="1" Grid.Row="1">Hi There</Button>
+        <Button Grid.Column="0" Grid.Row="1">Bye There</Button>
+        <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontWeight="Heavy" FontFamily="Bookman Old Style">Text</TextBlock>
+    </Grid>
+</Window>
